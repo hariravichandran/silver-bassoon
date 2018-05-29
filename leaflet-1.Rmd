@@ -1,0 +1,20 @@
+---
+title: "Map of Marlboro Costco"
+author: "Hari Ravichandran"
+date: "5/29/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Map
+```{r map}
+library(leaflet)
+
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=-74.303388, lat=40.361483, popup="Marlboro Costco, NJ")
+m  # Print the map
+```
